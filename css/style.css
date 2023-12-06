@@ -1,0 +1,502 @@
+:root {
+  --transition-duration: 0.5s;
+  --grey-color: hsl(0, 0%, 60%);
+  --dark-grey-color: hsl(0, 0%, 11%);
+  --animated-text-width: 527px;
+}
+
+@keyframes textAppear {
+  0% {
+    width: var(--animated-text-width);
+  }
+
+  30% {
+    width: 0%;
+  }
+
+  60% {
+    width: var(--animated-text-width);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif !important;
+}
+
+* {
+  text-decoration: none !important;
+  list-style: none !important;
+}
+
+a {
+  color: var(--dark-grey-color);
+}
+
+ul {
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.navbar-brand {
+  font-family: "Montserrat", sans-serif;
+}
+
+nav {
+  z-index: 999;
+}
+
+ul.navbar-nav li {
+  padding: 1rem 1.5rem;
+}
+
+.nav-item .active {
+  position: relative;
+}
+
+.nav-item .nav-link {
+  color: black;
+}
+
+.nav-item .active::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+}
+
+ul.navbar-nav li > a {
+  padding: 0 !important;
+}
+
+main {
+  background-image: url(../assets/bg.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.6);
+  background-blend-mode: multiply;
+}
+
+main .container h2 {
+  font-size: 4rem;
+}
+
+main .container h1 {
+  font-size: 5rem;
+}
+
+.animatedSpan {
+  white-space: nowrap;
+  position: relative;
+  top: 10px;
+  padding-right: 4px;
+  overflow: hidden;
+  animation: textAppear 3s infinite;
+}
+
+.animatedSpan::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 4px;
+  background-color: white;
+}
+
+main .container .brandLinks {
+  width: 50px;
+  height: 50px;
+}
+
+.about .imgabout {
+  padding: 0 0 0 30px;
+  position: relative;
+}
+
+.about .imgabout::after {
+  content: "";
+  width: 80%;
+  height: 80%;
+  position: absolute;
+  left: 0px;
+  bottom: -30px;
+  background-image: url(../assets/dots.png);
+  background-repeat: repeat;
+  z-index: -1;
+}
+
+.subtitle {
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.section-padding {
+  padding: 100px 0;
+}
+
+.about {
+  padding-bottom: 70px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.about h3 {
+  font-weight: 800;
+}
+
+.about h4 {
+  font-size: 14px;
+}
+
+.about .content {
+  color: #999;
+  font-size: 15px;
+}
+
+.about .skills {
+  margin-top: 30px;
+}
+.about .skills .item {
+  margin-bottom: 30px;
+}
+.about .skills h6 {
+  font-size: 13px;
+  color: #fff;
+  position: relative;
+  z-index: 2;
+}
+.about .skills .skills-progress {
+  width: 100%;
+  padding: 2px 5px;
+  border-radius: 5px;
+  background: #f7f7f7;
+  -webkit-box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15) inset;
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15) inset;
+  position: relative;
+}
+.about .skills .skills-progress .webdesign {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 95%;
+  border-radius: 5px;
+  background-color: var(--dark-grey-color);
+}
+
+.about .skills .skills-progress .branding {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 80%;
+  border-radius: 5px;
+  background-color: var(--dark-grey-color);
+}
+
+.about .skills .skills-progress .development {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 90%;
+  border-radius: 5px;
+  background-color: var(--dark-grey-color);
+}
+
+.about .skills .skills-progress span:after {
+  content: attr(data-value);
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  font-size: 11px;
+  color: #fff;
+}
+
+.about .button {
+  margin-top: 20px;
+  border: 2px solid var(--dark-grey-color);
+  padding: 10px 30px;
+}
+
+.about .button a {
+  text-decoration: none;
+  color: black;
+}
+
+.clearfix {
+  clear: both !important;
+}
+
+.about .dwnbtn {
+  background-color: var(--dark-grey-color);
+  color: white;
+}
+
+.about .dwnbtn:hover {
+  background-color: white;
+  color: var(--dark-grey-color);
+  transition: all 0.5s;
+}
+
+.about .cntbtn:hover {
+  background-color: var(--dark-grey-color);
+  color: white;
+  transition: all 0.5s;
+}
+
+.about .cntbtn:hover a {
+  color: white;
+  transition: all 0.5s;
+}
+
+.title {
+  margin: 0 auto 80px;
+  width: fit-content;
+  font-weight: 900;
+  font-size: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.title::after {
+  content: "";
+  width: 100%;
+  height: 30px;
+  background-image: url(../assets/dots.png);
+  background-repeat: repeat;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  z-index: -1;
+}
+
+.filter li {
+  padding: 0px 20px;
+  font-weight: 700;
+}
+
+.prtfcontainer img {
+  width: 100%;
+  height: auto;
+}
+
+.prtfcontainer {
+  position: relative;
+  overflow: hidden;
+}
+.vertical {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translate(0%, -50%);
+  -moz-transform: translate(0%, -50%);
+  -ms-transform: translate(0%, -50%);
+  -o-transform: translate(0%, -50%);
+  transform: translate(0%, -50%);
+}
+
+.prtfcontainer:hover .imgoverlay {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.prtfcontainer h6 {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  position: relative;
+  margin-bottom: 15px;
+  -webkit-transform: translateY(-15px);
+  transform: translateY(-15px);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.imgoverlay {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  background: rgba(255, 255, 255, 0.95);
+  opacity: 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  z-index: 2;
+  -webkit-transform: translateY(10px);
+  transform: translateY(10px);
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: #999;
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+  transition: opacity 0.6s ease;
+  border-radius: 100%;
+}
+
+.testimonial img {
+  width: 80px;
+  height: 80px;
+}
+
+.card .icon {
+  width: 80px;
+  height: 80px;
+  box-sizing: content-box;
+  margin: auto;
+  transition: var(--transition-duration);
+}
+
+.card .icon:hover {
+  background-color: black !important;
+}
+
+.card .icon i {
+  transition: var(--transition-duration);
+}
+
+.card .icon:hover i {
+  color: white;
+}
+
+.numbers h3 {
+  font-size: 2.5rem;
+}
+
+.cardOverlay {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  left: 5px;
+  bottom: 5px;
+  background-color: rgba(255, 255, 255, 0.8);
+  opacity: 0;
+  scale: 0.5;
+  transform: rotateY(180deg);
+  transition: var(--transition-duration);
+}
+
+#Team .card:hover .cardOverlay {
+  transform: rotateY(360deg);
+  scale: 1;
+  opacity: 1;
+}
+
+.icons {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #111;
+  background: #111;
+  color: #eee;
+}
+
+.icons:hover {
+  background: white;
+  color: #000;
+}
+
+.minifyIcons {
+  width: 30px;
+  height: 30px;
+}
+
+.icons i {
+  color: white;
+}
+
+.icons:hover i {
+  color: black;
+}
+
+#Team .card img {
+  transition: var(--transition-duration);
+}
+
+#Team .card picture:hover img {
+  scale: 1.2;
+}
+
+.textGrey {
+  color: var(--grey-color);
+}
+
+.contact .info .item:hover .icon {
+  background: #1c1c1c;
+  color: #eee;
+}
+
+.contact .info .item .icon {
+  margin-bottom: 15px;
+  background: #f4f4f4;
+  border-radius: 50%;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.contact .form input[type="text"],
+.contact .form input[type="email"],
+.contact .form textarea {
+  width: 100%;
+  border: 0;
+  border-radius: 5px;
+  padding: 10px;
+  background: #f4f4f4;
+}
+
+.contact .form textarea {
+  max-height: 160px;
+  max-width: 100%;
+  resize: both;
+}
+
+.contact .form .button {
+  padding: 10px 40px;
+}
+
+.submitBtn {
+  background: #1c1c1c;
+  color: #eee;
+  transition: 0.5s;
+}
+
+.submitBtn:hover {
+  background: white;
+  color: black;
+}
+
+.contactIcons {
+  width: 80px;
+  height: 80px;
+  transition: var(--transition-duration);
+}
+
+.contactIcons:hover {
+  background-color: black !important;
+}
+
+.contactIcons:hover i {
+  color: white;
+}

@@ -1,0 +1,37 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (max-width: 1200px) {
+    
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media all and (min-width: 1200px) {
+}
+
+/* Medium devices */
+@media all and (max-width: 1200px) {
+    :root {
+        --animated-text-width: 421px;
+    }
+
+    main .container h1 {
+        font-size: 4rem;
+    }
+}
+
+/* small devices */
+@media all and (max-width: 768px) {
+    :root {
+        --animated-text-width: 265px;
+    }
+
+    main .container h1 {
+        font-size: 2.5rem;
+    }
+}
